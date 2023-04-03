@@ -21,13 +21,13 @@ public class SearchMovie {
 	private String url = "https://www.omdbapi.com/?t=";
 	private String apikey = "&apikey=1869aa3e";
 	
-	//Client to request and pick up the information
+	// Client to request and pick up the information
 	private HttpClient client = HttpClient.newHttpClient(); 
 	
-	//Class MovieOMDB
+	// Class MovieOMDB
 	private MovieOMDB movie;
 	
-	//search -> client -> request -> (infos of site) <- [URL]
+	// Search -> client -> request -> (infos of site) <- [URL]
 	public MovieOMDB searchMovieOMDB(String parameter) {
 		
 		try {
@@ -40,7 +40,7 @@ public class SearchMovie {
 		return movie;
 	}
 	
-	//client -> request -> infos
+	// Client -> request -> infos
 	private void requestWebInfos(String newUrl)  {
 		URI adressOfWebsite = URI.create(newUrl);
 		HttpRequest request =
@@ -61,7 +61,7 @@ public class SearchMovie {
 	}
 	
 	
-	//filter infos e put in this.movie(MovieOMDB)
+	// Filter infos e put in this.movie(MovieOMDB)
 	private void filterAttributes(HttpResponse<String> resp) {
 		try {
 			String responseOfClient = resp.body();
@@ -76,7 +76,7 @@ public class SearchMovie {
 		
 	}
 	
-	//getMovie: type (MovieOMDB)
+	// GetMovie: type (MovieOMDB)
 	public MovieOMDB getMovie() {
 		return this.movie;
 	}

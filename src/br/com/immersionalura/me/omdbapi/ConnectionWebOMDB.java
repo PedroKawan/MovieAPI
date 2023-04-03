@@ -21,24 +21,24 @@ public class ConnectionWebOMDB {
 	 */
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		// simple version.
+		// Simple version.
 		
-		// read the movie title
+		// Read the movie title
 		print("Movie Title: ");
 		Scanner reader = new Scanner(System.in);
 		String parameter = reader.nextLine().replaceAll(" ", "+");
 		reader.close();
 		
-		//Add parameter to MovieOMDB 'movie' of Class 'SeacherMovie' with 'request'
+		// Add parameter to MovieOMDB 'movie' of Class 'SeacherMovie' with 'request'
 		MovieOMDB movie = new SearchMovie().searchMovieOMDB(parameter);
 		
 		println("\n\u001b[32m\u001b[1m- MOVIESTATUS -\u001b[m ");
 		
-		//method created to print movie status with color and stickers
+		// Method created to print movie status with color and stickers
 		movie.printMovieStatus();
 	}
 	
-	//shortcut to better understand
+	// Shortcut to better understand
 	private static void println(Object o) {
 		System.out.println(o);
 	}
