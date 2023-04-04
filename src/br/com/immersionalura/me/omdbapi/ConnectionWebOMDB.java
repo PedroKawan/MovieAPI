@@ -1,10 +1,10 @@
 package br.com.immersionalura.me.omdbapi;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 import br.com.immersionalura.me.omdbapi.helper.SearchMovie;
 import br.com.immersionalura.me.omdbapi.movie.MovieOMDB;
+import br.com.immersionalura.me.omdbapi.stickergenerator.StickerGenerator;
 
 /**
  * @author Pedro Kauã Silva dos Santos <pedrokauass71@gmail.com>
@@ -20,7 +20,7 @@ public class ConnectionWebOMDB {
 	 * @Email <https://www.alura.com.br/imersao-java>
 	 */
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) {
 		// simple version.
 		
 		// read the movie title
@@ -36,6 +36,9 @@ public class ConnectionWebOMDB {
 		
 		//method created to print movie status with color and stickers
 		movie.printMovieStatus();
+		
+		StickerGenerator generator = new StickerGenerator();
+		generator.creatingImage(movie);
 	}
 	
 	//shortcut to better understand

@@ -9,6 +9,10 @@ public class FilterException extends RuntimeException{
 		super(messagem);
 	}
 	
+	public FilterException(Throwable throwable){
+		super(throwable);
+	}
+	
 	@Override
 	public String getMessage() {
 		return "Error in Filter";
