@@ -21,7 +21,6 @@ public class ConnectionWebOMDB {
 	 */
 
 	public static void main(String[] args) {
-		// simple version.
 		
 		// Read the movie title
 		print("Movie Title: ");
