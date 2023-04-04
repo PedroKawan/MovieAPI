@@ -2,12 +2,12 @@ package br.com.immersionalura.me.omdbapi.movie;
 
 public class MovieOMDB {
 	
-	//Attributes 
+	// Attributes 
 	private String title;
 	private String poster;
 	private Double rating;
 	
-	//Constructor
+	// Constructor
 	public MovieOMDB() {
 		this("TitleVoid", "PosterVoid", 0.0);
 	}
@@ -19,7 +19,7 @@ public class MovieOMDB {
 		this.setRating(rating);
 	}
 	
-	//Getters an Setters methods 
+	// Getters an Setters methods 
 	public String getTitle() {
 		return title;
 	}
@@ -45,7 +45,7 @@ public class MovieOMDB {
 	}
 	
 	
-	//I created a toString to Movies :: Style -> {"Attribute":"info";...}
+	// I created a toString to Movies :: Style -> {"Attribute":"info";...}
 	@Override
 	public String toString() {
 		String s = "";
@@ -58,7 +58,7 @@ public class MovieOMDB {
 		return s;
 	}
 	
-	//Print Status with color and Stickers
+	// Print Status with color and Stickers
 	public void printMovieStatus() {
 		String s = "";
 		s +="\u001b[33m\u001b[1mTitle: \u001b[m" + "\u001b[36m" + this.getTitle() + "\u001b[m\n";
