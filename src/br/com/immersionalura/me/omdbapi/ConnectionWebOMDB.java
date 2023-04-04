@@ -21,9 +21,8 @@ public class ConnectionWebOMDB {
 	 */
 
 	public static void main(String[] args) {
-		// simple version.
 		
-		// read the movie title
+		// Sead the movie title
 		print("Movie Title: ");
 		Scanner reader = new Scanner(System.in);
 		String parameter = reader.nextLine().replaceAll(" ", "+");
