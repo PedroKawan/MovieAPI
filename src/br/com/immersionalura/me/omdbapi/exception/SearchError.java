@@ -9,6 +9,10 @@ public class SearchError extends Error{
 		super(messagem);
 	}
 	
+	public SearchError(Throwable throwable){
+		super(throwable);
+	}
+	
 	@Override
 	public String getMessage() {
 		return "Error in Search Movie";

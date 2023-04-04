@@ -8,6 +8,10 @@ public class ClientRequestException extends RuntimeException{
 	public ClientRequestException(String messagem){
 		super(messagem);
 	}
+
+	public ClientRequestException(Throwable throwable){
+		super(throwable);
+	}
 	
 	@Override
 	public String getMessage() {

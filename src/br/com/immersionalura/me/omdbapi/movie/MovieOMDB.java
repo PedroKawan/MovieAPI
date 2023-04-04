@@ -69,6 +69,7 @@ public class MovieOMDB {
 		for(int i = 0; i < (int)Double.parseDouble(this.getRating().toString()); i++) {
 			s += "🖤";
 		}
+		s += "\u001b[m";
 		
 		System.out.println(s);
 	}

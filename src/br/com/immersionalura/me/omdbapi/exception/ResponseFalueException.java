@@ -9,6 +9,10 @@ public class ResponseFalueException extends RuntimeException{
 		super(messagem);
 	}
 	
+	public ResponseFalueException(Throwable throwable){
+		super(throwable);
+	}
+	
 	@Override
 	public String getMessage() {
 		return "Error in Response";
