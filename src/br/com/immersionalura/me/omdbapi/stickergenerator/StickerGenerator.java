@@ -35,14 +35,10 @@ public class StickerGenerator {
 	public void creatingImage(MovieOMDB movie) {
 		// Title, Poster and Movie
 		this.movieGenerator = movie;
+		
 		String url = movie.getPoster().substring(movie.getPoster().indexOf("http"));
 		
-		// Limit of size: 0 - 23 (24)
-		if (movieGenerator.getTitle().length() >= 24)
-			movieGenerator.setTitle(movieGenerator.getTitle().substring(0,23)); 
-		
 		// Creating Image with URL
-		
 		try {
 		InputStream inputTrofy =
 				new FileInputStream("C:/Users/PedroKawan/Documents/Projects/ImmersionJava/MovieAPI/src/br/com/immersionalura/me/omdbapi/stickergenerator/imagens/trophy.png");

@@ -36,6 +36,7 @@ public class ConnectionWebOMDB {
 		// Method created to print movie status with color and stickers
 		movie.printMovieStatus();
 		
+		
 		StickerGenerator generator = new StickerGenerator();
 		generator.creatingImage(movie);
 	}
